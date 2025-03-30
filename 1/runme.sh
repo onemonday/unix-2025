@@ -1,15 +1,15 @@
 #!/bin/bash
-make -s sparce
+make -s sparse
 make -s create_A
 
 ./create_A
-./sparce A B
-./sparce A D -b 100
+./sparse A B
+./sparse A D -b 100
 
 gzip -kf A
 gzip -kf B
 
-gzip -cd B.gz | ./sparce C
+gzip -cd B.gz | ./sparse C
 
 for file in A A.gz B B.gz C D; do
     if [ -e "$file" ]; then

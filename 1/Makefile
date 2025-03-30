@@ -1,5 +1,5 @@
-sparce: sparce.c
-	gcc -O3 -o sparce sparce.c
+sparse: sparse.c
+	gcc -O3 -o sparse sparse.c
 
 create_A: create_A.c
 	gcc -O3 -o create_A create_A.c
